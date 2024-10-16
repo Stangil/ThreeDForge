@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeDForge", "ThreeDForge\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeDForge.Domain", "ThreeDForge.Domain\ThreeDForge.Domain.csproj", "{8A50CE0F-3EBE-4E2F-ABF8-BE683BA3A314}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeDForge.Application", "ThreeDForge.Application\ThreeDForge.Application.csproj", "{106E0BD0-B1A8-4B70-B031-1DA795E60E43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeDForge.Infrastructure", "ThreeDForge.Infrastructure\ThreeDForge.Infrastructure.csproj", "{2096E56A-86E0-4F24-A2BD-0FAA73B42CDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{8A50CE0F-3EBE-4E2F-ABF8-BE683BA3A314}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A50CE0F-3EBE-4E2F-ABF8-BE683BA3A314}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A50CE0F-3EBE-4E2F-ABF8-BE683BA3A314}.Release|Any CPU.Build.0 = Release|Any CPU
+		{106E0BD0-B1A8-4B70-B031-1DA795E60E43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{106E0BD0-B1A8-4B70-B031-1DA795E60E43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{106E0BD0-B1A8-4B70-B031-1DA795E60E43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{106E0BD0-B1A8-4B70-B031-1DA795E60E43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2096E56A-86E0-4F24-A2BD-0FAA73B42CDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2096E56A-86E0-4F24-A2BD-0FAA73B42CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2096E56A-86E0-4F24-A2BD-0FAA73B42CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2096E56A-86E0-4F24-A2BD-0FAA73B42CDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
