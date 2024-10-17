@@ -1,0 +1,11 @@
+﻿<div class="item-card">
+    <div class="item-card-body">
+        <h5>@Item.Name</h5>
+        Category: @Item.Category | added: @Item.AddedDate?.ToString("MMMM dd, yyyy")
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public required Item Item { get; set; }
+}

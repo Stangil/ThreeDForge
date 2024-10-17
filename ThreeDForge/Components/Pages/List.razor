@@ -1,0 +1,43 @@
+﻿@page "/"
+@inject IStoreRepository Repository
+@attribute [StreamRendering]
+<PageTitle>
+    Item List
+</PageTitle>
+
+<div class="row justify-content-center">
+    <div class="col-6">
+        <a href="add-new" class="btn btn-primary shadow-none mb-3">
+            Add new
+        </a>
+        @if(items is null)
+        {
+            <div class="item-item">
+                Loading Items. Please wait...
+            </div>
+        }
+        else if (items.Any())
+        {
+            @foreach(var item in items)
+            {
+                <div class="item-item">
+                    <ItemCard Item="item"/>
+                </div>
+            }
+        }
+        else
+        {
+            <div class ="item-item">
+                No items found
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    private List<Item>? items;
+    protected override async Task OnInitializedAsync()
+    {
+        items = await Repository.GetAllAsync();
+    }
+}
