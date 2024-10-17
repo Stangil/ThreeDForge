@@ -8,6 +8,6 @@ namespace ThreeDForge.Domain.Enums
 {
     public enum Category
     {
-        Misc,Figure,Vase,Sticker
+        Misc = 1,Figure,Vase,Sticker
     }
 }

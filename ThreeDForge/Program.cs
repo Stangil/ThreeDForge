@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using ThreeDForge.Application.Interfaces;
 using ThreeDForge.Components;
 using ThreeDForge.Infrastructure.Context;
+using ThreeDForge.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +13,7 @@ builder.Services.AddDbContextFactory<ThreeDForgeDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("ThreeDForgeConnectionString"));
 });
-
+builder.Services.AddScoped<IStoreRepository, StoreRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

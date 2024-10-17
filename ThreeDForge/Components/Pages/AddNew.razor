@@ -1,0 +1,60 @@
+﻿@page "/add-new"
+@inject IStoreRepository Repository
+@inject NavigationManager Navigation
+
+<PageTitle>Add New Item</PageTitle>
+
+<div class="row justify-content-center">
+    <div class="col-6">
+        <EditForm Enhance="true" method="post" FormName="AddItemForm" OnValidSubmit="AddItem" Model="Item" autocomplete="off">
+            <h3>Add New Item</h3>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <InputText id="name" @bind-Value="Item.Name" class="form-control shadow-none"/>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <InputText id="description" @bind-Value="Item.Description" class="form-control shadow-none" />
+            </div>
+            <div class="mb-3">
+                <label for="added-date" class="form-label">Date Added</label>
+                <InputDate id="added-date" @bind-Value="Item.AddedDate" class="form-control shadow-none" />
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <InputSelect id="category" @bind-Value="Item.Category" class="form-control shadow-none">
+                    <option value="0">
+                        Select Category
+                    </option>
+                    @foreach(var category in Enum.GetValues(typeof(Category)))
+                    {
+                        <option value="@category">
+                            @category.ToString()
+                        </option>
+                    }
+                </InputSelect>
+            </div> 
+            <div class="mb-3">
+                <label for="price" class="form-label">Price</label>
+                <InputNumber id="price" @bind-Value="Item.Price" class="form-control shadow-none" />
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary shadow-none">
+                    Submit
+                </button>
+            </div>
+            <DataAnnotationsValidator/>
+            <ValidationSummary/>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    [SupplyParameterFromForm]
+    public Item Item { get; set; } = new();
+    private async Task AddItem()
+    {
+        await Repository.AddAsync(Item);
+        Navigation.NavigateTo("/");
+    }
+}

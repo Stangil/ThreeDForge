@@ -8,14 +8,16 @@ namespace ThreeDForge.Domain.Entities
         [Key]
         [Required]
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage="Please provide a product name")]
         [MaxLength(100)]
         public string Name { get; set; } = string.Empty;
-        public DateTime AddedDate { get; set; }
-        public Category Category { get; set; }
-        public decimal Price { get; set; }
         [Required]
         [MaxLength(300)]
         public string? Description { get; set; }
+        public DateTime? AddedDate { get; set; }
+        [EnumDataType(typeof(Category), ErrorMessage = "Please select a category")]
+        public Category Category { get; set; }
+        public decimal Price { get; set; }
+       
     }
 }
