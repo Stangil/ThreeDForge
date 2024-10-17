@@ -25,5 +25,17 @@ namespace ThreeDForge.Infrastructure.Repositories
             var items = await _context.Items.ToListAsync();
             return items;
         }
+
+        public async Task<Item?> GetByIdAsync(int id)
+        {
+            var item = await _context.Items.FirstOrDefaultAsync(e=>e.Id==id); 
+            return item;
+        }
+
+        public async Task UpdateAsync(Item item)
+        {
+            _context.Entry(item).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+        }
     }
 }

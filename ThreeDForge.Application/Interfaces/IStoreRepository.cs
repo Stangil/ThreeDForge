@@ -7,5 +7,7 @@ namespace ThreeDForge.Application.Interfaces
     {
         Task AddAsync(Item item);
         Task<List<Item>> GetAllAsync();
+        Task<Item?> GetByIdAsync(int id);
+        Task UpdateAsync(Item item);
     }
 }

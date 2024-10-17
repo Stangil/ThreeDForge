@@ -3,6 +3,9 @@
         <h5>@Item.Name</h5>
         Category: @Item.Category | added: @Item.AddedDate?.ToString("MMMM dd, yyyy")
     </div>
+    <div class="actions">
+        <a href="@($"/edit/{Item.Id}")" class="btn btn-warning shadow-none">Edit</a>
+    </div>
 </div>
 
 @code {
