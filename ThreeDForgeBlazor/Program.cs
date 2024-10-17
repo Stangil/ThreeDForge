@@ -1,16 +1,10 @@
-using Microsoft.EntityFrameworkCore;
-using ThreeDForge.Components;
-using ThreeDForge.Infrastructure.Context;
+using ThreeDForgeBlazor.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
-builder.Services.AddDbContextFactory<ThreeDForgeDbContext>(options =>
-{
-    options.UseSqlServer(builder.Configuration.GetConnectionString("ThreeDForgeConnectionString"));
-});
 
 var app = builder.Build();
 

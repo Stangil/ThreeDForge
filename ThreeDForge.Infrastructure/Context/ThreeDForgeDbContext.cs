@@ -1,9 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ThreeDForge.Domain.Entities;
 
 namespace ThreeDForge.Infrastructure.Context
 {
@@ -13,5 +9,6 @@ namespace ThreeDForge.Infrastructure.Context
         {
             
         }
+        public DbSet<Item> Items { get; set; }
     }
 }

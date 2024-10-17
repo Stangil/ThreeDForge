@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeDForge", "ThreeDForge\ThreeDForge.csproj", "{F933388A-1C60-4734-B0D2-F027BAFC2785}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreeDForge", "ThreeDForge\ThreeDForge.csproj", "{F933388A-1C60-4734-B0D2-F027BAFC2785}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeDForge.Domain", "ThreeDForge.Domain\ThreeDForge.Domain.csproj", "{8A50CE0F-3EBE-4E2F-ABF8-BE683BA3A314}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreeDForge.Domain", "ThreeDForge.Domain\ThreeDForge.Domain.csproj", "{8A50CE0F-3EBE-4E2F-ABF8-BE683BA3A314}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeDForge.Application", "ThreeDForge.Application\ThreeDForge.Application.csproj", "{106E0BD0-B1A8-4B70-B031-1DA795E60E43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreeDForge.Application", "ThreeDForge.Application\ThreeDForge.Application.csproj", "{106E0BD0-B1A8-4B70-B031-1DA795E60E43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeDForge.Infrastructure", "ThreeDForge.Infrastructure\ThreeDForge.Infrastructure.csproj", "{2096E56A-86E0-4F24-A2BD-0FAA73B42CDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreeDForge.Infrastructure", "ThreeDForge.Infrastructure\ThreeDForge.Infrastructure.csproj", "{2096E56A-86E0-4F24-A2BD-0FAA73B42CDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ThreeDForge.Application\ThreeDForge.Application.csproj" />
     <ProjectReference Include="..\ThreeDForge.Domain\ThreeDForge.Domain.csproj" />
+    <ProjectReference Include="..\ThreeDForge.Infrastructure\ThreeDForge.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
