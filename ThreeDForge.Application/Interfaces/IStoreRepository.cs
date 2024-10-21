@@ -9,5 +9,6 @@ namespace ThreeDForge.Application.Interfaces
         Task<List<Item>> GetAllAsync();
         Task<Item?> GetByIdAsync(int id);
         Task UpdateAsync(Item item);
+        Task DeleteByIdAsync(int id);
     }
 }

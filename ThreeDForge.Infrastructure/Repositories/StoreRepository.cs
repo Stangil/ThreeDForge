@@ -20,6 +20,16 @@ namespace ThreeDForge.Infrastructure.Repositories
             await _context.SaveChangesAsync();
         }
 
+        public async Task DeleteByIdAsync(int id)
+        {
+            var item = await GetByIdAsync(id);
+            if (item != null)
+            {
+                _context.Items.Remove(item);
+                await _context.SaveChangesAsync();
+            }
+        }
+
         public async Task<List<Item>> GetAllAsync()
         {
             var items = await _context.Items.ToListAsync();

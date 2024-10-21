@@ -5,10 +5,18 @@
     </div>
     <div class="actions">
         <a href="@($"/edit/{Item.Id}")" class="btn btn-warning shadow-none">Edit</a>
+        <button @onclick="OnConfirmDialog" class="btn btn-danger shadow-none ms-3">
+            Delete
+        </button>
     </div>
 </div>
 
 @code {
+    private bool showConfirmDialog;
     [Parameter]
     public required Item Item { get; set; }
+    private void OnConfirmDialog()
+    {
+        showConfirmDialog = true;
+    }
 }
