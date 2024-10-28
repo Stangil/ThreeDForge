@@ -3,7 +3,7 @@
 {
     <div class="confirm-dialog-container">
         <div class="confirm-dialog">
-            <h3>Are you sure?</h3>
+            @ChildContent
             <div class="d-flex flex-row justify-content-end mt-3">
                 <button @onclick="OnCancel" class="btn btn-secondary shadow-none">
                     Cancel
@@ -23,4 +23,6 @@
     public EventCallback OnCancel { get; set; }
     [Parameter]
     public EventCallback OnOk { get; set; }
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
 }

@@ -1,4 +1,6 @@
-﻿<div class="item-card">
+﻿@inject IStoreRepository Repository
+@inject NavigationManager Navigation
+<div class="item-card">
     <div class="item-card-body">
         <h5>@Item.Name</h5>
         Category: @Item.Category | added: @Item.AddedDate?.ToString("MMMM dd, yyyy")
@@ -10,6 +12,9 @@
         </button>
     </div>
 </div>
+<ConfirmDialog Show="showConfirmDialog" OnCancel="CancelDelete" OnOk="DeleteItem">
+    <h3>Do you want to delete item @Item.Name?</h3>
+    </ConfirmDialog>
 
 @code {
     private bool showConfirmDialog;
@@ -18,5 +23,15 @@
     private void OnConfirmDialog()
     {
         showConfirmDialog = true;
+    }
+    private void CancelDelete()
+    {
+        showConfirmDialog = false;
+    }
+    private async Task DeleteItem()
+    {
+        await Repository.DeleteByIdAsync(Item.Id);
+        showConfirmDialog = false;
+        Navigation.NavigateTo("/");
     }
 }
