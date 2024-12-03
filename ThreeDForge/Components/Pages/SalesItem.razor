@@ -1,0 +1,12 @@
+﻿@page "/salesitem/{id:int}"
+@inject IStoreRepository Repository
+@inject NavigationManager Navigation
+@* <h3>Item</h3> *@
+<PageTitle>Item</PageTitle>
+
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+    
+}
